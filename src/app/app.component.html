@@ -1,0 +1,16 @@
+<hello name="{{ name }}"></hello>
+ <mat-card *ngIf="recognizing" class="notification">{{notification}}</mat-card>
+
+      <br />
+
+      <button type="button" mat-raised-button color="primary" (click)="startButton($event)"
+        >
+        <mat-icon *ngIf="!recognizing" class="mat-icon">mic</mat-icon>
+        <mat-icon *ngIf="recognizing" class="mat-icon">stop</mat-icon>
+        <!--<mat-icon *ngIf="!recognizing" class="material-icons color_blue font_size">mic</mat-icon>
+          <mat-icon *ngIf="recognizing" class="material-icons color_blue font_size">stop</mat-icon>-->
+      </button>
+      <br />
+      <div id="speechdiv" [innerHTML]="innerHtml">
+
+      </div>
